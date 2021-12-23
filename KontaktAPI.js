@@ -1,5 +1,5 @@
-import { API } from "./Extras/fetchAPI.js";
-import { KontaktResponseObject as RespObjt  } from "./Extras/KontaktResponseObject.js";
+import { API } from "./fetchAPI.js";
+import { KontaktResponseObject as RespObjt  } from "./KontaktResponseObject.js";
 (async function () {
   "use strict";
   // import HelloWorld from "./components/HelloWorld.vue";
@@ -44,7 +44,7 @@ import { KontaktResponseObject as RespObjt  } from "./Extras/KontaktResponseObje
   const ApiKey = "czxyAeSyhSBcCliKkhdaSIDBaidYIBff";
   const millisecondsPerSecond = 1000, secondsPerMinute = 60, minutesPerHour = 60, hoursPerDay = 24, daysToRead = 10;
 
-  $(document).ready(function () {
+  // $(document).ready(function () {
   //  Start of ready code
     $("#getbuildingsbutton").click(async function () {
 
@@ -82,7 +82,7 @@ import { KontaktResponseObject as RespObjt  } from "./Extras/KontaktResponseObje
     // .catch(err => {
     //   console.error(err);
     // });
-  });
+  // });
 
 
   // todo
