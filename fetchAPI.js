@@ -27,6 +27,21 @@ export class API {
     });
     return response.json();
   }
+  async tryGet(url) {
+    const response = await fetch(url, {
+      "method": "GET",
+      dataType: "json",
+      "headers": {
+        "Content-Type": "application/json",
+        "Api-Key": this.ApiKey
+      }
+    });
+    if (response.status >= 200 && response.status <= 299) {
+      return response.json();
+    } else {
+      console.error("Response failed.");
+    }
+  }
   // async seatsGet(roomId) {
   //   // var urlString ="https://apps-api.test.kontakt.io/v3/occupancy?page=0&size=2&sort=roomId&startTime=2021-11-17T15:46:35.321Z&endTime=2021-11-17T15:49:55.321Z&roomId="
   //   return $.ajax({

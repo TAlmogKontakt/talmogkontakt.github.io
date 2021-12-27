@@ -8,6 +8,17 @@ export class KontaktResponseObject {
         this.getter = new API(APIKey);
     };
 
+    static async maker(url, APIKey) {
+        // this.content = JSONResponse.content;
+        // this.links = JSONResponse.links;
+        // this.page = JSONResponse.page;
+        // this.getter = new API(APIKey);
+        let getter = new API(APIKey);
+        let data = await getter.tryGet(url);
+        console.log(data);
+        return new KontaktResponseObject(data,APIKey );
+    };
+
     getAllPageURLs() {
         var allPageURLs = [];
         const currntURL = this.links[0].href;

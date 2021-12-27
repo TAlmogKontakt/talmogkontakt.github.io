@@ -57,16 +57,17 @@ import { KontaktResponseObject as RespObjt  } from "./KontaktResponseObject.js";
     //   var x  = new RespObjt(data);
       console.log( "Hello?")
     // });
-    let data = await getter.basicGet("https://apps-api.test.kontakt.io/v3/occupancy/room-attributes/history?roomId=2444734");
-    var x  = new RespObjt(data, ApiKey);
-    //   // console.log("Mark 1");
+    // let data = await getter.basicGet("https://apps-api.test.kontakt.io/v3/occupancy/room-attributes/history?roomId=2444734");
+    // var x  = new RespObjt(data, ApiKey);
+    var x  = RespObjt.maker("https://apps-api.test.kontakt.io/v3/occupancy/room-attributes/history?roomId=2444734");
+      console.log(x);
     //   // x.getAllPageURLs();
      
     //   // console.log( x.links[0].href);
     //   // var y = [];
     //   // x.returnData(x.links[0].href,y );
-      let y =  await x.getAllData();
-      console.log(y);
+      // let y =  await x.getAllData();
+      // console.log(y);
     // fetch("https://apps-api.test.kontakt.io/v3/occupancy/room-attributes/history?roomId=2444734", {
     //   "method": "GET",
     //   "headers": {
